@@ -1,0 +1,32 @@
+<div class="container">
+
+    {{!-- Page Header --}}
+	<div class="row">
+	    <div class="col-md-12">
+	        <h1 class="text-center">Eat-Da-Burger App</h1>
+	    </div>
+  	</div>
+	<!-- End of Header -->
+
+	<div class="row content">
+        {{!-- Columns for available burgers --}}
+	    <div class="col-xs-12 col-md-6">
+		<br>
+			<h2>Available Burgers</h2>
+			<ul>
+			  {{#each burgers}}
+			    {{#unless this.devoured}}
+                <li>
+                    {{this.burger_name}}
+									<span>
+                  <form action='api/burgers/{{this.id}}?_method=PUT' method='POST'>
+                    <input type="hidden" name="devoured" value="true">
+                		<button class="btn-primary" type="submit">Devour It!</button>
+                    </form></span>
+
+                </li>
+			    {{/unless}}
+			  {{/each}}
+			</ul>
+
+	    </div>
