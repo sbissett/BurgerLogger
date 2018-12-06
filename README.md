@@ -13,7 +13,7 @@ To use application, click
 
 Installation
 To run this application locally, first run this command in your git bash or terminal
-git clone https://github.com/sbissett/burger.git
+git clone https://github.com/sbissett/BurgerLogger.git
 
 Next be sure intsall the dependencies
 npm install
