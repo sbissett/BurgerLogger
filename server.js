@@ -7,14 +7,14 @@ var PORT = process.env.PORT || 3000;
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+app.use(express.static(__dirname + "./public"));
 
 // bodyparsers 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(bodyParser.json({ type: 'application/*+json' }));
-app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
-app.use(bodyParser.text({ type: 'text/html' }));
+// app.use(bodyParser.json({ type: 'application/*+json' }));
+// app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
+// app.use(bodyParser.text({ type: 'text/html' }));
 
 // override with POST having ?_method=DELETE or PUT
 app.use(methodOverride('_method'));

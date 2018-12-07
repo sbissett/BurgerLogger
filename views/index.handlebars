@@ -29,5 +29,21 @@
 			  {{/each}}
 			</ul>
 
+			<ul>
+			  {{#each burgers}}
+			    {{#if this.devoured}}
+                <li>
+                    {{this.burger_name}}
+									<span>
+                  <form action='api/burgers/{{this.id}}?_method=PUT' method='POST'>
+                    <input type="hidden" name="devoured" value="true">
+                		<button class="btn-primary" type="submit">Devour It!</button>
+                    </form></span>
+
+                </li>
+			    {{/if}}
+			  {{/each}}
+			</ul>
+
 	    </div>
 			
