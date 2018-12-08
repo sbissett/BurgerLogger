@@ -8,6 +8,7 @@ The user may enter any burger name to add into the menu, and this entry gets ent
 
 Demo
 To use application, click 
+![Demo](https://github.com/sbissett/friendfinder/blob/master/app/public/assets/images/FinalPicture.JPG) 
 
 
 
@@ -18,7 +19,7 @@ git clone https://github.com/sbissett/BurgerLogger.git
 Next be sure intsall the dependencies
 npm install
 
-Also, be sure to add in your won password for mysql workbench
+Also, be sure to add in your password for mysql workbench
 
 Lastly, run the node server locally
 node server.js
